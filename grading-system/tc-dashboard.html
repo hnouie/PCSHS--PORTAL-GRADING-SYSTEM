@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCSHS | Teacher Dashboard</title>
+    <link rel="stylesheet" href="tc-dashboard.css">
+</head>
+<body>
+
+<header class="topbar">
+    <h1>PCHSHS</h1>
+    <span>Teacher Dashboard</span>
+    <button class="logout-btn">Logout</button>
+</header>
+
+<div class="container">
+
+    <!-- FORM -->
+    <div class="card">
+        <h2>Enter Student Grade</h2>
+
+        <div class="form-group">
+            <label>Student Name</label>
+            <input type="text" placeholder="Juan Dela Cruz">
+        </div>
+
+        <div class="form-group">
+            <label>Subject</label>
+            <input type="text" placeholder="Math">
+        </div>
+
+        <div class="form-group">
+            <label>Grade</label>
+            <input type="number" placeholder="92">
+        </div>
+
+        <button class="save-btn">Save Grade</button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="card">
+        <h2>Grade Records</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Student</th>
+                    <th>Subject</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody id="gradeTable">
+                <tr>
+                    <td>Juan Dela Cruz</td>
+                    <td>Math</td>
+                    <td>92</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="tc-dashboard.js"></script>
+</body>
+</html>

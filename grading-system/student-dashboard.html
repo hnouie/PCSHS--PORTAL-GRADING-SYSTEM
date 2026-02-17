@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PCSHS | Student Dashboard</title>
+<link rel="stylesheet" href="student-dashboard.css">
+</head>
+<body>
+
+<header class="topbar">
+    <h1>PCSHS</h1>
+    <span>Student Dashboard</span>
+    <button class="logout-btn" id="logoutBtn">Logout</button>
+</header>
+
+<div class="dashboard">
+
+    <!-- PROFILE -->
+    <div class="profile-card">
+        <img id="profilePic" class="profile-pic">
+        <div class="profile-info">
+            <h2 id="studentName"></h2>
+            <p><strong>LRN:</strong> <span id="studentLRN"></span></p>
+            <p><strong>Grade & Section:</strong> <span id="studentSection"></span></p>
+            <p><strong>Strand:</strong> <span id="studentStrand"></span></p>
+            <p><strong>School Year:</strong> <span id="schoolYear"></span></p>
+            <p><strong>Adviser:</strong> <span id="adviser"></span></p>
+        </div>
+    </div>
+
+    <!-- GWA -->
+    <div class="gwa-card">
+        <h3>General Weighted Average</h3>
+        <div class="gwa-score" id="gwaScore">0.00</div>
+        <span class="status" id="gwaStatus"></span>
+    </div>
+
+    <!-- SUBJECTS -->
+    <div class="card">
+        <h3>Subjects</h3>
+        <ul class="subject-list" id="subjectList"></ul>
+    </div>
+
+    <!-- SUBJECT GRADES -->
+    <div class="card">
+        <h3 id="subjectTitle">Subject Grades</h3>
+        <table class="quarter-table">
+            <thead>
+                <tr>
+                    <th>Quarter</th>
+                    <th>Average</th>
+                </tr>
+            </thead>
+            <tbody id="subjectGrades"></tbody>
+        </table>
+    </div>
+
+    <!-- QUARTER OVERVIEW -->
+    <div class="card full">
+        <h3>Grades by Quarter</h3>
+        <table class="quarter-table">
+            <thead>
+                <tr>
+                    <th>Quarter</th>
+                    <th>Average</th>
+                </tr>
+            </thead>
+            <tbody id="quarterOverview"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="student-dashboard.js"></script>
+</body>
+</html>
