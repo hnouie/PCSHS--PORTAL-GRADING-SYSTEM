@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)
+    ),
+    url("bg.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 100%;
+    text-align: center;
+}
+
+.login-box {
+    width: 360px;
+    margin: auto;
+    background: rgba(255,255,255,0.92);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    animation: fadeIn 0.8s ease;
+}
+
+.school-name {
+    font-size: 32px;
+    color: #7b0f0f; /* mas pang-teacher / admin vibe */
+}
+
+.school-sub {
+    font-size: 13px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.login-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #7b0f0f;
+    color: white;
+    border: none;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #5e0b0b;
+}
+
+.links {
+    margin-top: 15px;
+}
+
+.links a {
+    font-size: 12px;
+    color: #7b0f0f;
+    text-decoration: none;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
