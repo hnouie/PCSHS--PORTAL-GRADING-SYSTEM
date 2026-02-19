@@ -14,20 +14,20 @@
 
         <h2 class="login-title">Student Login</h2>
 
-        <div class="input-group">
-            <input type="text" id="username" placeholder="Username">
-        </div>
+        <form id="studentLoginForm">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Username">
+                <small class="error-msg" id="usernameError"></small>
+            </div>
 
-        <div class="input-group">
-            <input type="password" id="password" placeholder="Password">
-        </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password">
+                <small class="error-msg" id="passwordError"></small>
+            </div>
 
-        <button class="login-btn" id="loginBtn">Login</button>
-
-        <div class="links">
-            <a href="#">Forgot Username</a>
-            <a href="#">Forgot Password</a>
-        </div>
+            <button type="submit" class="login-btn">Login</button>
+            <div class="alert-msg" id="alertMsg"></div>
+        </form>
     </div>
 
     <footer>
