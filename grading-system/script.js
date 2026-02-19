@@ -1,13 +1,14 @@
-// Dummy student account & info
+// Dummy student account
 const studentAccount = {
     username: "student",
     password: "1234",
-    fullName: "Juan Dela Cruz",
-    lrn: "1234567890",
-    gradeSection: "Grade 11-A",
+    fullName: "John Louie Hernandez",
+    lrn: "116205100062",
+    gradeSection: "Grade 12-Justice",
     strand: "TechPro",
-    adviser: "Mrs. Santos",
-    profilePic: "profile-placeholder.png" // placeholder picture
+    schoolYear: "2025-2026",
+    adviser: "Ms. Bonabel G. Bontoyan",
+    profilePic: "juan.jpg" // placeholder picture
 };
 
 // Sample grades
