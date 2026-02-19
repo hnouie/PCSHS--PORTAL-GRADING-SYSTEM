@@ -1,5 +1,12 @@
+
+
 // Load student info
 const student = JSON.parse(localStorage.getItem("loggedInStudent"));
+if(!student){
+    // Not logged in, redirect to login page
+    window.location.href = "student.html";
+}
+
 const grades = JSON.parse(localStorage.getItem("studentGrades"));
 
 const profileImage = student.profilePic && student.profilePic !== "" ? student.profilePic : "default-avatar.png";
