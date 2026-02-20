@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("studentStrand").innerText = s.strand;
             document.getElementById("studentSY").innerText = s.sy;
             document.getElementById("studentAdviser").innerText = "Ms. Bonabel G. Bontoyan";
-            document.getElementById("studentPhoto").src = s.photo || "default.jpg";
+            document.getElementById("studentPhoto").src = s.photo || "juan.jpg";
         } else {
             document.getElementById("studentNameDisplay").innerText = "-";
             document.getElementById("studentLRN").innerText = "-";
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("studentStrand").innerText = "-";
             document.getElementById("studentSY").innerText = "-";
             document.getElementById("studentAdviser").innerText = "-";
-            document.getElementById("studentPhoto").src = "default.jpg";
+            document.getElementById("studentPhoto").src = "juan.jpg";
         }
     });
 
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const gradeSec = document.getElementById("newStudentGradeSec").value;
         const strand = document.getElementById("newStudentStrand").value;
         const sy = document.getElementById("newStudentSY").value;
-        const photo = document.getElementById("newStudentPhoto").value || "default.jpg";
+        const photo = document.getElementById("newStudentPhoto").value || "juan.jpg";
 
         if(!name || !lrn || !gradeSec || !strand || !sy){
             alert("Please complete all fields for new student");
