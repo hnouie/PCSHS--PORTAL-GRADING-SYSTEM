@@ -2,10 +2,12 @@
 
 // Load student info
 const student = JSON.parse(localStorage.getItem("loggedInStudent"));
-if(!student){
-    // Not logged in, redirect to login page
-    window.location.href = "student.html";
-}
+if(!student)
+
+   document.querySelector(".logout-btn").addEventListener("click", function(){
+        localStorage.removeItem("loggedInStudent");
+        window.location.href = "login.html";
+});
 
 const grades = JSON.parse(localStorage.getItem("studentGrades"));
 

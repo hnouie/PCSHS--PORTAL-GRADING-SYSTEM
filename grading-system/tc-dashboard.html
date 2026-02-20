@@ -1,61 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>PCSHS | Teacher Dashboard</title>
-    <link rel="stylesheet" href="tc-dashboard.css">
+<meta charset="UTF-8">
+<title>PCSHS | Teacher Dashboard</title>
+<link rel="stylesheet" href="tc-dashboard.css">
 </head>
 <body>
 
 <header class="topbar">
-    <h1>PCHSHS</h1>
+    <h1>PCSHS</h1>
     <span>Teacher Dashboard</span>
     <button class="logout-btn">Logout</button>
 </header>
 
 <div class="container">
 
-    <!-- FORM -->
-    <div class="card">
-        <h2>Enter Student Grade</h2>
-
-        <div class="form-group">
-            <label>Student Name</label>
-            <input type="text" placeholder="Juan Dela Cruz">
+    <!-- TEACHER PROFILE CARD -->
+    <div class="card" id="profileCard">
+        <div style="text-align:center; margin-bottom:15px;">
+            <img id="teacherPhoto" src="teacher.jpg" alt="Teacher Photo" style="width:140px;height:140px;border-radius:50%;border:3px solid #7b1fa2;">
         </div>
-
-        <div class="form-group">
-            <label>Subject</label>
-            <input type="text" placeholder="Math">
-        </div>
-
-        <div class="form-group">
-            <label>Grade</label>
-            <input type="number" placeholder="92">
-        </div>
-
-        <button class="save-btn">Save Grade</button>
+        <h2>Teacher Profile</h2>
+        <p><strong>Name:</strong> <span id="tcName">Juan Dela Cruz</span></p>
+        <p><strong>Email:</strong> <span id="tcEmail">teacher@example.com</span></p>
+        <p><strong>Strand:</strong> <span id="tcStrand">STEM</span></p>
+        <p><strong>Teacher No.:</strong> <span id="tcNumber">1</span></p>
+       
     </div>
 
-    <!-- TABLE -->
+    <!-- STUDENT INFO CARD -->
+    <div class="card" id="studentInfoCard">
+        <div style="text-align:center; margin-bottom:15px;">
+            <img id="studentPhoto" src="juan.jpg" alt="Student Photo" style="width:120px;height:120px;border-radius:50%;border:2px solid #1976d2;">
+        </div>
+        <h2>Student Info</h2>
+        <p><strong>Name:</strong> <span id="studentNameDisplay">-</span></p>
+        <p><strong>LRN:</strong> <span id="studentLRN">-</span></p>
+        <p><strong>Grade & Section:</strong> <span id="studentGradeSec">-</span></p>
+        <p><strong>Strand:</strong> <span id="studentStrand">-</span></p>
+        <p><strong>School Year:</strong> <span id="studentSY">-</span></p>
+       
+    </div>
+
+    <!-- ADD STUDENT CARD -->
+    <div class="card">
+        <h2>Add New Student</h2>
+        <div class="form-group"><label>Name</label><input type="text" id="newStudentName"></div>
+        <div class="form-group"><label>LRN</label><input type="text" id="newStudentLRN"></div>
+        <div class="form-group"><label>Grade & Section</label><input type="text" id="newStudentGradeSec"></div>
+        <div class="form-group"><label>Strand</label><input type="text" id="newStudentStrand"></div>
+        <div class="form-group"><label>School Year</label><input type="text" id="newStudentSY"></div>
+        <div class="form-group"><label>Photo Filename</label><input type="text" id="newStudentPhoto" placeholder="juan.jpg"></div>
+        <button class="save-btn" id="addStudentBtn">Add Student</button>
+    </div>
+
+    <!-- ENTER GRADE CARD -->
+    <div class="card">
+        <h2>Enter Student Grade</h2>
+        <div class="form-group">
+            <label>Select Student</label>
+            <select id="studentSelect"><option value="">--Choose Student--</option></select>
+        </div>
+        <div class="form-group"><label>Subject</label><input type="text" id="subject"></div>
+        <div class="form-group"><label>Grade</label><input type="number" id="grade"></div>
+        <div class="form-group">
+            <label>Quarter</label>
+            <select id="quarter">
+                <option value="Q1">Quarter 1</option>
+                <option value="Q2">Quarter 2</option>
+                <option value="Q3">Quarter 3</option>
+                <option value="Q4">Quarter 4</option>
+            </select>
+        </div>
+        <button class="save-btn" id="saveGrade">Save Grade</button>
+        <button class="email-btn" id="notifyStudent">Email Student</button>
+    </div>
+
+    <!-- GRADES TABLE CARD -->
     <div class="card">
         <h2>Grade Records</h2>
-
         <table>
             <thead>
-                <tr>
-                    <th>Student</th>
-                    <th>Subject</th>
-                    <th>Grade</th>
-                </tr>
+                <tr><th>Student</th><th>Subject</th><th>Grade</th><th>Quarter</th></tr>
             </thead>
-            <tbody id="gradeTable">
-                <tr>
-                    <td>Juan Dela Cruz</td>
-                    <td>Math</td>
-                    <td>92</td>
-                </tr>
-            </tbody>
+            <tbody id="gradeTable"></tbody>
         </table>
     </div>
 
