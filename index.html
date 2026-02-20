@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCSHS | Login</title>
+
+    <!-- ORIGINAL STYLES MO -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tc-dashboard.css">
+
+    <!- ADDITIONAL THEME STYLE -->
+    <style>
+        body.student-theme .login-box {
+            border-top: 5px solid #1976d2;
+        }
+
+        body.teacher-theme .login-box {
+            border-top: 5px solid #7b1fa2;
+        }
+
+        .role-switch {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+
+        .role-btn {
+            padding: 6px 15px;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+        }
+
+        .student-btn {
+            background: #1976d2;
+            color: white;
+        }
+
+        .teacher-btn {
+            background: #7b1fa2;
+            color: white;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="student-theme">
+
+<div class="login-container">
+    <div class="login-box">
+
+        <h1 class="school-name">PCSHS</h1>
+        <p class="school-sub">PASAY CITY SOUTH HIGH SCHOOL</p>
+
+        <!-- ROLE SWITCH -->
+        <div class="role-switch">
+            <button class="role-btn student-btn" onclick="showStudent()">Student</button>
+            <button class="role-btn teacher-btn" onclick="showTeacher()">Teacher</button>
+        </div>
+
+        <!-- ================= STUDENT FORM ================= -->
+        <div id="studentForm">
+            <h2 class="login-title">Student Login</h2>
+
+            <form id="studentLoginForm">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Username">
+                    <small class="error-msg" id="usernameError"></small>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password">
+                    <small class="error-msg" id="passwordError"></small>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+                <div class="alert-msg" id="alertMsg"></div>
+            </form>
+        </div>
+
+        <!-- ================= TEACHER FORM ================= -->
+        <div id="teacherForm" class="hidden">
+            <h2 class="login-title">Teacher Login</h2>
+
+            <div class="input-group">
+                <input type="text" placeholder="Teacher Username">
+            </div>
+
+            <div class="input-group">
+                <input type="password" placeholder="Password">
+            </div>
+
+            <button class="login-btn">Login</button>
+
+            <div class="links">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        © PCSHS
+    </footer>
+</div>
+
+<!-- ORIGINAL SCRIPTS MO -->
+<script src="script.js"></script>
+<script src="teacher-script.js"></script>
+
+<!-- ADDITIONAL SCRIPT -->
+<script>
+    function showStudent() {
+        document.body.classList.remove("teacher-theme");
+        document.body.classList.add("student-theme");
+
+        document.getElementById("studentForm").classList.remove("hidden");
+        document.getElementById("teacherForm").classList.add("hidden");
+    }
+
+    function showTeacher() {
+        document.body.classList.remove("student-theme");
+        document.body.classList.add("teacher-theme");
+
+        document.getElementById("studentForm").classList.add("hidden");
+        document.getElementById("teacherForm").classList.remove("hidden");
+    }
+</script>
+
+</body>
+</html>
