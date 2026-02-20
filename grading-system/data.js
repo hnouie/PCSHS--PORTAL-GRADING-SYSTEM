@@ -11,7 +11,7 @@ const students = [
     strand: "STEM",
     schoolYear: "2025-2026",
     adviser: "Mr. Santos",
-    profilePic: "https://via.placeholder.com/150"
+    profilePic: "juan.jpg"
   }
 ];
 

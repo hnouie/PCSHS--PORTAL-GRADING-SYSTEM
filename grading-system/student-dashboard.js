@@ -11,7 +11,7 @@ if(!student)
 
 const grades = JSON.parse(localStorage.getItem("studentGrades"));
 
-const profileImage = student.profilePic && student.profilePic !== "" ? student.profilePic : "juan.png";
+const profileImage = student.profilePic && student.profilePic !== "juan.jpg" ? student.profilePic : "https://via.placeholder.com/150";
 document.getElementById("profilePic").src = profileImage;
 
 // PROFILE
