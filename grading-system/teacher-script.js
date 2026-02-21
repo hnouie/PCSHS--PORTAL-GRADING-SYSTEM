@@ -1,30 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const teacherContainer = document.getElementById("teacherForm");
+    const teacherForm = document.getElementById("teacherForm");
+    const loginBtn = teacherForm.querySelector(".login-btn"); // use teacher form login button
 
-    if (teacherContainer) {
+    loginBtn.addEventListener("click", function (e) {
+        e.preventDefault(); // prevent form submission
 
-        const loginBtn = teacherContainer.querySelector(".login-btn");
+        const username = teacherForm.querySelector('input[type="text"]').value;
+        const password = teacherForm.querySelector('input[type="password"]').value;
 
-        if (loginBtn) {
-            loginBtn.addEventListener("click", function (e) {
-
-                e.preventDefault();
-
-                const usernameInput = teacherContainer.querySelector('input[type="text"]');
-                const passwordInput = teacherContainer.querySelector('input[type="password"]');
-
-                const username = usernameInput ? usernameInput.value : "";
-                const password = passwordInput ? passwordInput.value : "";
-
-                if (username === "teacher" && password === "admin") {
-                    window.location.href = "tc-dashboard.html";
-                } else {
-                    alert("Invalid teacher login");
-                }
-
-            });
+        // FAKE TEACHER ACCOUNT
+        if (username === "teacher" && password === "admin") {
+            window.location.href = "http://127.0.0.1:5500/c-dashboard.html";
+        } else {
+            alert("Invalid teacher login");
         }
-    }
+    });
 
 });
