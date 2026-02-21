@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // FAKE TEACHER ACCOUNT
         if (username === "teacher" && password === "admin") {
-            window.location.href = "http://127.0.0.1:5500/tc-dashboard.html";
+            window.location.href = "tc-dashboard.html";
         } else {
             alert("Invalid teacher login");
         }
